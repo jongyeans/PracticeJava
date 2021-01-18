@@ -26,9 +26,7 @@ public class WeirdFlowOfException {
         }
         catch (Exception e) {
             System.out.println("catch Block is called");
-            e.printStackTrace();
         }
-
         finally {
             System.out.println("finally Block is called");
         }
@@ -68,12 +66,9 @@ public class WeirdFlowOfException {
         }
         finally {
             System.out.println("finally Block is called");
-            // (2) try 문의 return은 사라짐
+            // (2) try 의 return은 사라짐
             return "finally";
         }
-
-//        Unreachable!!!! (= return in try)
-//        return "EndOfBlock";
 
     }
 
@@ -92,7 +87,7 @@ public class WeirdFlowOfException {
         }
         finally {
             System.out.println("finally Block is called");
-            // (2) try 문의 return은 사라짐
+            // (2) try 및 catch 의 return은 사라짐
             return "finally";
         }
     }
