@@ -1,29 +1,21 @@
 package Exception;
 
-public class CustomException {
+// extends Exception or RuntimeException
+public class CustomException extends Exception {
 
-    public static void main(String[] args)  {
-        CustomException custom = new CustomException();
-        custom.makeCustomException(101);
-
+    public CustomException() {
+        super();
     }
 
-    // TODO: Custom Exception 을 만들기 전에, 예외 생성하는 방법 작성할 것
-    public void makeCustomException(int number) throws Error {
-
-//        try {
-//            if(number > 100) {
-//                throw new Exception("Number is over 100");
-//            }
-//
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-
-        if (number > 100) {
-            throw new RuntimeException("Number is over 100"); //
-        }
-
+    public CustomException(String message) {
+        super(message);
     }
 
+    public CustomException(String message, Throwable cause) {
+        super(message, cause);
+    }
+
+    public static void main(String[] args) throws Exception {
+        throw new CustomException("Custom Error", new Throwable("Error happens with..."));
+    }
 }
