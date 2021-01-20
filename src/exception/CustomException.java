@@ -1,4 +1,4 @@
-package Exception;
+package exception;
 
 // extends Exception or RuntimeException
 public class CustomException extends Exception {

@@ -1,4 +1,4 @@
-package Exception;
+package exception;
 
 public class WeirdFlowOfException {
     public static void main(String[] args) {

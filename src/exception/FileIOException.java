@@ -1,4 +1,4 @@
-package Exception;
+package exception;
 
 import java.io.File;
 import java.io.FileOutputStream;
